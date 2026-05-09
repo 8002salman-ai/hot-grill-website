@@ -26,9 +26,9 @@ export const RESTAURANT_INFO = {
     ],
   },
   social: {
-    instagram: '#',
-    facebook: '#',
-    twitter: '#',
+    instagram: 'https://instagram.com',
+    facebook: 'https://facebook.com',
+    tiktok: 'https://tiktok.com',
   },
   established: 2009,
 };

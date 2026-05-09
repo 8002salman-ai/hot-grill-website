@@ -1,4 +1,4 @@
-import { Flame, MapPin, Phone, Mail, Globe, MessageCircle, Camera, Settings } from 'lucide-react';
+import { Flame, MapPin, Phone, Mail, Globe, MessageCircle, Camera, Settings, Facebook, Music } from 'lucide-react';
 import { RESTAURANT_INFO } from '../config/restaurant';
 
 const quickLinks = [
@@ -35,15 +35,30 @@ export default function Footer({ onAdminAccess }: FooterProps) {
               Houston's premier halal restaurant since {RESTAURANT_INFO.established}. 100% Halal Certified.
             </p>
             <div className="flex gap-2">
-              {[Camera, Globe, MessageCircle].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="p-2 rounded-lg bg-dark-card border border-dark-border text-gray-500 hover:text-flame hover:border-flame/30 transition-colors"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              <a
+                href={RESTAURANT_INFO.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-dark-card border border-dark-border text-gray-500 hover:text-flame hover:border-flame/30 transition-colors"
+              >
+                <Camera className="w-4 h-4" />
+              </a>
+              <a
+                href={RESTAURANT_INFO.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-dark-card border border-dark-border text-gray-500 hover:text-flame hover:border-flame/30 transition-colors"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href={RESTAURANT_INFO.social.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-dark-card border border-dark-border text-gray-500 hover:text-flame hover:border-flame/30 transition-colors"
+              >
+                <Music className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
