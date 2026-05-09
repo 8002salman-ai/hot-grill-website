@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Flame Color System */
+  --color-flame: #FF4D2A;
+  --color-flame-red: #FF2A2A;
+  --color-flame-orange: #FF6A00;
+  --color-flame-deep: #CC2200;
+  --color-flame-glow: rgba(255, 77, 42, 0.4);
+  
+  /* Legacy gold for subtle accents */
+  --color-gold: #D4A843;
+  --color-gold-light: #E8C76A;
+  
+  --color-crimson: #DC2626;
+  --color-dark: #0A0A0A;
+  --color-dark-card: #111111;
+  --color-dark-hover: #1A1A1A;
+  --color-dark-border: #222222;
+  --color-dark-surface: #0D0D0D;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-flame) var(--color-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-flame);
+  border-radius: 3px;
+}
+
+/* Flame Gradient - Primary */
+.flame-gradient {
+  background: linear-gradient(135deg, var(--color-flame-red), var(--color-flame-orange));
+}
+
+.flame-gradient-hover {
+  background: linear-gradient(135deg, var(--color-flame-orange), var(--color-flame-red));
+}
+
+/* Text Gradient */
+.text-flame-gradient {
+  background: linear-gradient(135deg, var(--color-flame-red), var(--color-flame-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Flame Glow Effect */
+.flame-glow {
+  box-shadow: 0 0 20px var(--color-flame-glow), 0 0 40px rgba(255, 106, 0, 0.2);
+}
+
+.flame-glow-sm {
+  box-shadow: 0 4px 15px var(--color-flame-glow);
+}
+
+/* Gold gradient for subtle accents */
+.gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-flame {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 77, 42, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(255, 77, 42, 0.1); }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-flame {
+  animation: pulse-flame 2s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: flicker 1.5s ease-in-out infinite;
+}
+
+/* Hide number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
