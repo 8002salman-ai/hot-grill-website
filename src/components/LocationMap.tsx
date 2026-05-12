@@ -29,7 +29,7 @@ export default function LocationMap() {
               <h3 className="font-display text-lg font-bold text-white mb-1">{RESTAURANT_INFO.name}</h3>
               <p className="text-gray-500 text-xs flex items-center gap-1">
                 <CheckCircle className="w-3.5 h-3.5 text-green-500" />
-                100% Halal Certified
+                100% Certified Halal
               </p>
             </div>
             <div className={`px-3 py-1.5 rounded-lg text-xs font-medium ${

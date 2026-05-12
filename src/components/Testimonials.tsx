@@ -13,7 +13,7 @@ const reviews = [
   {
     name: 'Sarah M.',
     rating: 5,
-    text: "The mixed grill platter is massive and delicious. Love that everything is 100% halal certified. Will definitely be back!",
+    text: "The mixed grill platter is massive and delicious. Love that everything is 100% certified halal. Will definitely be back!",
     avatar: '👩‍💻',
     date: '1 month ago',
   },
